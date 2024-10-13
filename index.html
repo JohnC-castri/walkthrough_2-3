@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>manipulating</title>
+</head>
+
+<body>
+    <h3>Manipulating Arrays</h3>
+    <script>
+        const letters = ['a', 'b', 'c', 'd', 'e']
+        for (let i = 0; i < letters.length; i++) {
+            let char = letters[i]
+            console.log(char)
+        }
+        for (let idx = letters.length - 1; idx > -1; idx--) {
+            let char = letters[idx]
+            console.log(char)
+        }
+
+        const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+        let multiplied = 1
+        for (let idex = 1; idex < nums.length; idex += 3) {
+            let char = nums[idex]
+            console.log(`current tottal ${multiplied}`)
+            multiplied *= char
+            console.log(`the index ${idex}`)
+            console.log(`the char ${char}`)
+            console.log(multiplied)
+        }
+
+        const fruits = ['apple', 'orange', 'tomato', 'banana', 'pineapple']
+        let index = 0
+        while (index < fruits.length) {
+            let fruit = fruits[index]
+            console.log(fruit)
+            if (fruit === "tomato") {
+                console.log(`Tomato is not a fruit`)
+                break
+            }
+            index++
+        }
+
+        const words = ['apple', 'orange', 'tomato', 'banana', 'pineapple']
+        let letterss = []
+        for (let i = 0; i < words.length; i++) {
+            let word = words[i]
+            for (let j = 0; j < word.length; j++) {
+                let char = word[j]
+                console.log(char)
+                if (char === "n") {
+                    letterss.push(char)
+                }
+            }
+            console.log(letterss)
+        }
+
+        let cards = ['aceSpades', '5Clubs', 'queenDiamonds', 'twoHearts']
+        function pickCard() {
+            if (!cards.length) {
+                console.log("no more cards")
+            }
+            else {
+                let picked = cards.pop()
+                console.log(`you picked ${picked}`)
+            }
+        }
+    </script>
+
+</body>
+
+</html>
